@@ -1,0 +1,8 @@
+def your_code():
+    numbers = [62, 66, 94, 97, 25, 11, 68, 54, 48, 67]
+    sum = 0
+    for even in numbers:
+     if even % 2 == 0:
+        print(f"List of even numbers are {even}")
+        sum += even
+    return sum
