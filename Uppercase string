@@ -1,0 +1,7 @@
+def uppercase(string):
+    return string.upper()
+print(uppercase("Anwesha"))
+
+names = ["Nick","Jane","Sara"]
+for name in names:
+  print(uppercase(name))
