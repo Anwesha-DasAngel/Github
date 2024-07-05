@@ -1,0 +1,20 @@
+import random
+import time
+
+print("Welcome to the guessing game. Computer!Pick a number between 1 and 100")
+time.sleep(3)
+print("Picking a number...")
+guess = int(input("Your guess please!Guess a number between 1 and 100: "))
+correct_answer = random.randint(1, 100)
+guess_count = 1
+while guess != correct_answer:
+  if guess < correct_answer:
+    print("Your guess is too low.Try with a higher number")
+  else:
+    print("Your guess is too high.Try with a lower number")
+  guess_count += 1
+  guess = int(input("Guess a number between 1 and 100: "))
+
+print(
+    f"Congrats! The right answer was {correct_answer}. It took you {guess_count} guesses"
+)
