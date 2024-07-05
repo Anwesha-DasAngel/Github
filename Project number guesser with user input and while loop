@@ -1,0 +1,8 @@
+guess = int(input("Guess a number between 1 and 10: "))
+correct_answer = 10
+guess_count = 1
+while guess != correct_answer:
+      guess_count+=1
+      guess = int(input("Guess a number between 1 and 10: "))
+
+print(f"Congrats! The right answer was {correct_answer}. It took you {guess_count} guesses")
