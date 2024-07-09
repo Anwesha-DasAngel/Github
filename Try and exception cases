@@ -1,0 +1,10 @@
+print ("Arithmetic type")
+try:
+    age = "25"
+    total = age + 25
+    print("total")
+
+except  Exception as e:
+      
+    print("Arithmetic operations error")    
+    print(e)
