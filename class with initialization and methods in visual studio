@@ -1,0 +1,19 @@
+class laptop:
+    details = "I am learning python in my laptop"
+    
+    def __init__(self):
+        print(" I have two laptops")
+        self.name1 = "cozy"
+        self.name2 = "mozy"
+    
+    def python(self):
+        print(f"My name is {self.name1}")
+        print(f"My name is {self.name2}")
+        
+print(" I have three laptops")
+laptop1 = laptop()
+laptop2 = laptop()
+print(laptop1.name1)
+print(laptop2.name2)
+
+laptop1.python()
