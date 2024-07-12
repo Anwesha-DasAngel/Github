@@ -1,0 +1,21 @@
+import requests
+
+try:
+    response = requests.get("https://api.openweathermap.org/data/2.5/weather?units=metric&lat=44.34&lon=10.99&appid=b66e693e3d88a9bb10b43667cc274a2a")
+    print(response.json())
+except:
+    print("Failed to Establish a new connection")
+
+response_json = response.json()
+print(response_json["main"])
+
+temp = response_json["main"]["temp"]
+temp_min = response_json["main"]["temp_min"]
+temp_max = response_json["main"]["temp_max"]
+
+print(f"The current temparature in Bengaluru is {temp} °C")
+print(f"The minnimum tenparature in Bengaluru is {temp_min} °C")
+print(f"The maximum temparature in Bengaluru is {temp_max} °C")
+
+
+
