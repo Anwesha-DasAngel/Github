@@ -1,0 +1,8 @@
+import requests
+#response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=b66e693e3d88a9bb10b43667cc274a2a")
+#print(response.json())
+try:
+    response = requests.get("https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=b66e693e3d88a9bb10b43667cc274a2a")
+    print(response.json())
+except:
+    print("Failed to Establish a new connection")
