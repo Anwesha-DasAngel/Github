@@ -1,0 +1,35 @@
+import requests
+
+class City:
+    def __init__(self, name, lat, long, units="metric"):
+        self.name = name
+        self.lat = lat
+        self.units = units
+        self.long = long
+        self.get_data(units)
+   
+    def get_data(self, units):
+        try:
+            response = requests.get("https://api.openweathermap.org/data/2.5/weather?units="+units+"&lat=44.34&lon=10.99&appid=b66e693e3d88a9bb10b43667cc274a2a")
+            self.response_json = response.json()
+            self.temp = self.response_json["main"]["temp"]
+            self.temp_min = self.response_json["main"]["temp_min"]
+            self.temp_max = self.response_json["main"]["temp_max"]
+        except:
+            print("Failed to Establish a new connection")
+
+    def temp_print(self):
+        units_symbol = "C"
+        if self.units == "imperial":
+           units_symbol = "F"
+        print(f"The current temparature in {self.name} is {self.temp} {units_symbol}")
+        print(f"The minnimum tenparature in {self.name} is {self.temp_min} {units_symbol}")
+        print(f"The maximum temparature in {self.name} is {self.temp_max} {units_symbol}")
+        
+       
+my_city = City("Bengaluru",35.6762,139.6503)
+my_city.temp_print()
+
+vacation_city = City("Bali", 45.5152, 122.6784,units = "imperial")
+vacation_city.temp_print()
+print(vacation_city.response_json)
