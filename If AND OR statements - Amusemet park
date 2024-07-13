@@ -1,0 +1,24 @@
+age = 12
+height = 140
+
+#if and
+if age >= 12 and height >= 140:
+    print("You can ride the ride")
+
+#if or
+if age >=12 or height>=160:
+    print("You can ride the ride")
+
+#elif (else if)
+if height < 120:
+    print("You can't ride all rides")
+elif height < 135:
+    print("You can ride level-1 rides")
+elif height < 200:
+     print("You can ride all rides")
+else:
+    print("You're too tall to ride any ride")
+
+# usage of and or together
+if age % 2 == 0 and age > 12 or age == 12:
+    print("You've an interesting age")
