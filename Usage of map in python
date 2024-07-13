@@ -1,0 +1,25 @@
+class Student:
+    def __init__(self,name,score):
+        self.name = name
+        self.score = score
+
+students = [Student("Anwesha",0.98),Student("Asmit",0.48),Student("Bhaiyu",0.68),Student("Tinni",0.88)]
+
+student_results = []
+for student in students:
+    #if student.score >= 0.70:
+       #student_results.append(f"{student.name} is passed")
+    #else:
+        #student_results.append(f"{student.name} is failed")
+    
+#print(student_results)
+     student_results.append(f"{student.name} is passed") if student.score >= 0.70 else student_results.append(f"{student.name} is failed")
+map_results = list(map(lambda student: f"{student.name} is passed" if student.score >= 0.70 else f"{student.name} is failed",students))
+print(map_results)
+
+numbers = {1,2,3,4,5}
+
+for number in numbers:
+ map_results = list(map(lambda number: number * 2, numbers))
+print(map_results)
+
