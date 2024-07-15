@@ -1,0 +1,14 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://aemskills.com/"
+
+response = requests.get(url)
+html = response.content
+soup = BeautifulSoup(html,'html.parser')
+c_tags = soup.find_all('span')
+for c_tag in c_tags:
+    print(c_tag.get_text())
+
+titles = list(map(lambda c_tag: c_tag.get_text(),c_tags))
+print(titles)
